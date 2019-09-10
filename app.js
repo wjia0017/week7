@@ -137,8 +137,16 @@ app.get('/getTask', function(err,res){
 //*Insert A Task */
 app.get('/NewTask',function (req,res) {
     res.sendFile(__dirname + '/views/NewTask.html');
-    })
+})
 
+app.get('/:oldfirstname/:newfirstname', function (req,res){
+
+    Developers.updateMany({'name.firstname': req.params.oldfirstname}, {$set: {'name.firstname': req.params.newfirstname}}, function (err, doc){
+        console.log(doc);
+        res.send(doc);
+    });
+  
+});
 
 app.post('/addTask', function (req,res){
     req.body.taskId = getNewID();
