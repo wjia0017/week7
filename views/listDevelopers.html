@@ -1,0 +1,72 @@
+<head>
+      <link rel="stylesheet" href="stylesheet.css"/>
+  </head>
+  <style>
+    table,th,td{
+         border: 1px solid black;
+      }
+</style>
+
+<body>
+     <h1>List Developers</h1>
+
+    <h2>
+    <a href = "/">Home</a> 
+    <a href = "/NewTask">Add NewTask</a>
+    <a href = "/updateTask">updateTask</a>
+    <a href = "/listTasks">List Tasks</a>
+    <a href ="/deleteTask">Delete Task</a>
+    <a href = "/deleteTaskComplete">deleteTaskComplete</a>
+    <a href = "/NewDeveloper">Add new Developer</a>
+    </h2>
+
+   <table>
+     <tr>
+        <td>_id</td>
+        <td>firstname</td>
+        <td>lastname</td>
+        <td>level</td>
+        <td>state</td>
+        <td>suburb</td>
+        <td>street</td>
+        <td>unit</td>
+    </tr>
+  <% for (var i =0; i<developers.length; i++){%>
+    <tr>
+        <td>
+            <%= developers[i]._id %>
+        </td>
+      
+        <td>
+            <%= developers[i].name.firstname %>
+        </td>
+
+        <td>
+            <%= developers[i].name.lastname %>
+        </td>
+
+        <td>
+            <%= developers[i].level %>
+        </td>
+
+        <td>
+            <%= developers[i].Address.State %>
+        </td>
+
+        <td>
+            <%= developers[i].Address.Suburb %>
+        </td>
+
+        <td>
+            <%= developers[i].Address.Street %>
+        </td>
+
+        <td>
+            <%= developers[i].Address.Unit %>
+        </td>
+     </tr>
+    <% }%>
+    </table>
+</h3>    
+</body>
+</html>
