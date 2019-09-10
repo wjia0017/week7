@@ -115,7 +115,6 @@ app.post('/deleteTaskdata', function(req,res){
   });
 });
 
-
 //*Delete Completed Tasks */
 app.get('/deleteTaskComplete', function (req,res){
     res.sendFile(__dirname + '/views/deleteTaskComplete.html');
