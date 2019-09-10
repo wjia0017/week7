@@ -22,8 +22,8 @@ console.log("Sever running at http://localhost:8080");
 
 let mongoose = require('mongoose');
 
-let Tasks = require('./models/tasks.js');
-let Developers = require('./models/developers.js');
+let Tasks = require('./models/Tasks.js');
+let Developers = require('./models/Developers.js');
 
 mongoose.connect('mongodb://localhost:27017/fit2095db', function (err){
     if(err){
